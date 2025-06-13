@@ -30,7 +30,7 @@ echo "Current writeInterval: $CURRENT_VALUE"
 echo "Changing writeInterval to: $NEW_VALUE"
 
 # Modify the writeInterval value in the file
-sed -i "s/^writeInterval\s\+[0-9]\+;/writeInterval    $NEW_VALUE;/" "$CONTROL_DICT"
+sed -i "s/^writeInterval\s\+[0-9]\+;/writeInterval$NEW_VALUE;/" "$CONTROL_DICT"
 
 if [ $? -eq 0 ]; then
     echo "Successfully updated writeInterval to $NEW_VALUE"
